@@ -1,6 +1,6 @@
 "use client";
 
-import ConnectLiveSession from "@/api/websocket";
+import ConnectLiveSession from "@/api/session";
 import { Message } from "@/types/message";
 import { Session } from "@/types/session";
 import { useRef, useState } from "react";
