@@ -5,6 +5,7 @@ import { Message } from "@/types/message";
 import { Session } from "@/types/session";
 import { useRef, useState } from "react";
 import styles from "./liveSession.module.css";
+import { MessageType } from "@/types/messageType";
 
 export default function LiveSession() {
     const [status, setStatus] = useState<'idle' | 'connecting' | 'live' | 'closed' | 'error'>('idle');
@@ -23,9 +24,8 @@ export default function LiveSession() {
     }
 
     function updateSesstion(message: Message) {
-        if (message.type === "snapshot") {
+        if (message.type === MessageType.Snapshot) {
             setSessions(message.data);
-            console.log("update");
         }
     }
 

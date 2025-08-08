@@ -1,4 +1,5 @@
+import { MessageType } from "./messageType";
 import { Session } from "./session";
 
 export type Message =
-    | { type: 'snapshot'; data: Session[] };
+    | { type: MessageType; data: Session[] };
