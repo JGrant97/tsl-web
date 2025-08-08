@@ -1,8 +1,9 @@
-import { Message } from "@/types/message";
-import { SocketEventHandlers } from "@/types/SocketEventHandlers";
 
-export default async function Connect(handlers: SocketEventHandlers) {
-    const socket = new WebSocket(`${process.env.API_URL}/ws`);
+import { Message } from "@/types/message";
+import { SocketEventHandlers } from "@/types/socketEventHandlers";
+
+export default function ConnectLiveSession(handlers: SocketEventHandlers) {
+    const socket = new WebSocket(`${process.env.NEXT_PUBLIC_API_URL}/ws`);
 
     socket.onopen = () => handlers.onOpen?.();
     socket.onclose = () => handlers.onClose?.();

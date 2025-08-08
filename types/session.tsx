@@ -1,9 +1,9 @@
 export type Session = {
-    id: string;
-    series: string;
-    name: string;
-    track: string;
-    state: string;
-    startTime?: string | null;
-    duration: string;
+    Id: string;
+    Series: string;
+    Name: string;
+    Track: string;
+    State: string;
+    StartTime?: string | null;
+    Duration: string;
 };

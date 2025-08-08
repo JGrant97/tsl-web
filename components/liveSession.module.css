@@ -1,0 +1,18 @@
+.container{
+    display: grid;
+    gap: 1rem;
+}
+
+.buttonContainer{
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sessionContainer{
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+    color: #fff;
+    border: 1px solid #fff;
+}
