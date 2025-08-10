@@ -6,6 +6,7 @@ import { Session } from "@/types/session";
 import { useRef, useState } from "react";
 import styles from "./liveSession.module.css";
 import { MessageType } from "@/types/messageType";
+import Button from "../button/button";
 
 export default function LiveSession() {
     const [status, setStatus] = useState<'idle' | 'connecting' | 'live' | 'closed' | 'error'>('idle');
@@ -40,12 +41,12 @@ export default function LiveSession() {
         <div className={styles.container}>
             <h1>Sessions <small>({status})</small></h1>
             <div className={styles.buttonContainer}>
-                <button onClick={startConnection} disabled={status === 'connecting' || status === 'live'}>
+                <Button onClick={startConnection} disabled={status === 'connecting' || status === 'live'}>
                     Start WebSocket
-                </button>
-                <button onClick={disconnect} disabled={!socket.current || status === 'closed'}>
+                </Button>
+                <Button onClick={disconnect} disabled={!socket.current || status === 'closed'}>
                     Disconnect
-                </button>
+                </Button>
             </div>
 
             <div className={styles.sessionContainer}>

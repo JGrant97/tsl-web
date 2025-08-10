@@ -14,5 +14,12 @@
     gap: 1rem;
     padding: 1rem;
     color: #fff;
-    border: 1px solid #fff;
+    border: 2px solid var(--border-colour);
+    border-radius: 0.25rem;
+}
+
+@media screen and (max-width: 380px) {
+.buttonContainer{
+    grid-template-columns: auto;
+}
 }

@@ -1,6 +1,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent: #222222;
+  --border-colour: #353535;
+  --primary: #467ed5;
+  --primary-darker: #18315b;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -10,11 +14,7 @@
   }
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
+
 
 body {
   color: var(--foreground);
